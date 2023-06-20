@@ -7,4 +7,6 @@ export const startWidget = () => {
   renderWidgetToday(widget);
   renderWidgetOther(widget);
   renderWidgetForecast(widget);
+
+  return widget;
 }
