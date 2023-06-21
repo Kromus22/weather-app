@@ -1,3 +1,5 @@
+const checkZero = (n) => n < 10 ? `0${n}` : n;
+
 export const getCurrentTime = () => {
   const months = [
     'Янв',
@@ -29,17 +31,8 @@ export const getCurrentTime = () => {
   const month = months[date.getMonth()];
   const year = date.getFullYear();
   const dayOfWeek = weekdays[date.getDay()];
-
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  const hours = checkZero(date.getHours());
+  const minutes = checkZero(date.getMinutes());
 
   return { month, year, dayOfMonth, dayOfWeek, hours, minutes };
 }
