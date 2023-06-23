@@ -150,7 +150,7 @@
 
 .widget__forecast {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .widget__day-item {
